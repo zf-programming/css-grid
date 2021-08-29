@@ -4,15 +4,18 @@ body {
 }
 
 .container {
-  width: 600px;
+  width: 70%;
   margin: 50px auto;
+  border: 3px solid black;
   display: grid;
-  grid-template-columns: 1fr min-content 1fr;
-  /* min-content = ukuran terkecil konten, tapi untuk lebarnya diambil dari kata terpanjang */
-  /* cth "Hello Indonesia" maka lebarnya akan sesuai dengan kata Indonesia */
-  /* kata-kata nya dibagi menjadi beberapa baris */
-  grid-template-columns: 1fr max-content 1fr; /* mengoverride yang atas */
-  /* max-content = lebarnya sesuai dengan ukuran konten didalamnya */
+  grid-template-columns: repeat(auto-fit, 100px);
+  /* auto-fill dan auto-fit secara tampilan sama */
+  /* membuat jumlah cell sesuai dengan ukuran parentnya */
+  /* mirip seperti flex-wrap kalau di flex */
+
+  /* perbedaannya */
+  /* auto-fill menyisakan implicit (sesuai ukuran cell) jika ada space di ujung container */
+  /* auto-fit tidak akan menyisakan implicit, akan stop di akhir explicit */
 }
 
 .item {
