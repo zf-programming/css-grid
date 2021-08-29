@@ -6,11 +6,16 @@ body {
 .container {
   width: 800px;
   margin: auto;
+  display: grid;
+  grid-template-columns: 150px auto 200px; /* Mengatur kolom */
+  grid-template-rows: 200px auto 100px; /* Mengatur baris */
 }
 
 .item {
   background-color: coral;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .item:nth-child(even) {
