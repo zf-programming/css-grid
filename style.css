@@ -9,8 +9,11 @@ body {
   display: grid;
   /* Ukuran explicit adalah ukuran grid yang ditentukan langsung */
   /* Ukuran implicit adalah ukuran grid sisanya */
-  grid-template-columns: 150px 150px auto; /* 3kolom */
+  grid-template-columns: 150px 150px 100px; /* 3kolom */
   grid-template-rows: 150px 150px; /* 2baris */
+  grid-auto-rows: 200px; /* mengatur ukuran implicit row */
+  grid-auto-columns: 200px; /* mengatur ukuran implicit column */
+  grid-auto-flow: column; /* mengatur default acuan track sisanya */
 }
 
 .item {
