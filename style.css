@@ -7,8 +7,12 @@ body {
   width: 600px;
   margin: 50px auto;
   display: grid;
-  grid-template-columns: repeat(4, 1fr) repeat(5, 1.5fr);
-  /* repeat ( berapa kali, ukuran ) */
+  grid-template-columns: 1fr min-content 1fr;
+  /* min-content = ukuran terkecil konten, tapi untuk lebarnya diambil dari kata terpanjang */
+  /* cth "Hello Indonesia" maka lebarnya akan sesuai dengan kata Indonesia */
+  /* kata-kata nya dibagi menjadi beberapa baris */
+  grid-template-columns: 1fr max-content 1fr; /* mengoverride yang atas */
+  /* max-content = lebarnya sesuai dengan ukuran konten didalamnya */
 }
 
 .item {
