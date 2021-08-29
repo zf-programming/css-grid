@@ -7,12 +7,8 @@ body {
   width: 600px;
   margin: 50px auto;
   display: grid;
-  /* Values pada grid */
-  /* gtr atau gtc: [lineName] size */
-  /* value pada size: px, %, fr (fraction), auto */
-  /* Fraction mirip dengan flex-grow */
-  grid-template-columns: 1fr 2fr 3.5fr;
-  grid-template-rows: 4fr 2fr 2.5fr; /* akan menyesuaikan jika ada height */
+  grid-template-columns: repeat(4, 1fr) repeat(5, 1.5fr);
+  /* repeat ( berapa kali, ukuran ) */
 }
 
 .item {
