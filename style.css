@@ -4,21 +4,44 @@ body {
 }
 
 .container {
+  height: 500px;
   width: 70%;
   margin: 50px auto;
   border: 3px solid black;
   display: grid;
-  grid-template-columns: 1fr minmax(50px, 300px) 1fr;
-  /* ukuran minimal dan maximal column/row */
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 50px 2fr 50px;
+  grid-template-areas:
+    "header header" /* row 1 */
+    "aside main" /* row 2 */
+    "footer footer"; /* row 3 */
+  /* membuat template untuk pada grid */
 }
 
 .item {
-  background-color: coral;
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 2px solid wheat;
 }
 
-.item:nth-child(even) {
+header {
+  background-color: coral;
+  grid-area: header;
+  /* men-set div dll, ke dalam area di grid-template */
+}
+
+aside {
   background-color: cornflowerblue;
+  grid-area: aside;
+}
+
+main {
+  background-color: lightseagreen;
+  grid-area: main;
+}
+
+footer {
+  background-color: orchid;
+  grid-area: footer;
 }
