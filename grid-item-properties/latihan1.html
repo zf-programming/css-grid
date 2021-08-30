@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Latihan 1</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        width: 80%;
+        height: 500px;
+        margin: auto;
+        border: 3px solid black;
+        display: grid;
+        grid-template: [r1] 1fr [r2] 1fr [r3] 1fr [r4] / [c1] 1fr [c2] 1fr [c3] 1fr [c4];
+        /* grid-template: row / column; */
+        gap: 10px;
+      }
+
+      .item {
+        background-color: tomato;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .item:nth-child(even) {
+        background-color: teal;
+      }
+
+      .i1 {
+        /* Menentukan are suatu item berdasarkan line-number */
+        /* grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 4; */
+      }
+
+      .i2 {
+        /* Menentukan are suatu item berdasarkan line-name */
+        /* grid-column-start: c1;
+        grid-column-end: c3;
+        grid-row-start: r2;
+        grid-row-end: r4; */
+      }
+
+      .i3 {
+        /* Kata kunci span (artinya ditambah) */
+        grid-column-start: 1;
+        grid-column-end: span 3; /* start 1, end span 3 (1+3) artinya end di line 4 */
+        grid-row-start: 2;
+        grid-row-end: span 2;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item i1">1</div>
+      <div class="item i2">2</div>
+      <div class="item i3">3</div>
+      <div class="item i4">4</div>
+      <div class="item i5">5</div>
+      <div class="item i6">6</div>
+      <div class="item i7">7</div>
+      <div class="item i8">8</div>
+      <div class="item i9">9</div>
+    </div>
+  </body>
+</html>
