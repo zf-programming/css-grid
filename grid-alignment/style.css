@@ -11,14 +11,9 @@ body {
   display: grid;
   grid-template: repeat(3, 100px) / repeat(3, 100px);
   gap: 5px;
-  /* align Content */
-  /* Posisi Grid dalam suatu container */
-  /* align-content: start; */
-  /* align-content: end; */
-  /* align-content: center; */
-  /* align-content: space-around; */
-  align-content: space-between;
-  /* align-content: space-evenly; */
+  /* place Content */
+  /* <align-content> <justify-content> */
+  place-content: center space-between;
 }
 
 .kotak {
