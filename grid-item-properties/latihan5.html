@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Latihan 1</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        width: 80%;
+        height: 500px;
+        margin: auto;
+        border: 3px solid black;
+        display: grid;
+        grid-template: [r1] 1fr [r2] 1fr [r3] 1fr [r4] / [c1] 1fr [c2] 1fr [c3] 1fr [c4];
+        /* grid-template: row / column; */
+        grid-template-areas:
+          "header header header"
+          "sidebar content content"
+          "footer footer footer";
+      }
+
+      .item {
+        background-color: tomato;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        height: 50%;
+      }
+
+      .item:nth-child(even) {
+        background-color: teal;
+      }
+
+      /* Place-self : short alignment secara vertikal (x), horizontal (y) */
+      /* place-self: <align-self> <justify-self> */
+      .i1 {
+        place-self: center start;
+      }
+      .i2 {
+        place-self: start center;
+      }
+      .i3 {
+        place-self: end center;
+      }
+      .i4 {
+        width: unset;
+        height: unset;
+        place-self: stretch; /* jika sama, boleh ditulis 1x */
+      }
+      .i5 {
+        place-self: start end;
+      }
+      .i6 {
+        place-self: center;
+      }
+      .i7 {
+        place-self: end;
+      }
+      .i8 {
+        place-self: end start;
+      }
+      .i9 {
+        place-self: start;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item i1">place-self: center start</div>
+      <div class="item i2">place-self: start center</div>
+      <div class="item i3">place-self: end center</div>
+      <div class="item i4">place-self: stretch</div>
+      <div class="item i5">place-self: start end</div>
+      <div class="item i6">place-self: center</div>
+      <div class="item i7">place-self: end</div>
+      <div class="item i8">place-self: end start</div>
+      <div class="item i9">place-self: start</div>
+    </div>
+  </body>
+</html>
