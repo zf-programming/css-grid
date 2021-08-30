@@ -11,11 +11,11 @@ body {
   display: grid;
   grid-template: repeat(3, 1fr) / repeat(3, 1fr);
   gap: 5px;
-  /* Justify items, posisi seluruh item secara horizontal (Y) */
-  /* justify-items: start; */
-  /* justify-items: end; */
-  justify-items: center;
-  /* justify-items: stretch; */
+  /* align items, posisi seluruh item secara vertikal (X) */
+  /* align-items: start; */
+  align-items: end;
+  /* align-items: center; */
+  /* align-items: stretch; */
 }
 
 .kotak {
