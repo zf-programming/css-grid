@@ -11,6 +11,11 @@ body {
   display: grid;
   grid-template: repeat(3, 1fr) / repeat(3, 1fr);
   gap: 5px;
+  /* Justify items, posisi seluruh item secara horizontal (Y) */
+  /* justify-items: start; */
+  /* justify-items: end; */
+  justify-items: center;
+  /* justify-items: stretch; */
 }
 
 .kotak {
