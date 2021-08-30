@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Latihan 1</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        width: 80%;
+        height: 500px;
+        margin: auto;
+        border: 3px solid black;
+        display: grid;
+        grid-template: [r1] 1fr [r2] 1fr [r3] 1fr [r4] / [c1] 1fr [c2] 1fr [c3] 1fr [c4];
+        /* grid-template: row / column; */
+        grid-template-areas:
+          "header header header"
+          "sidebar content content"
+          "footer footer footer";
+        gap: 10px;
+      }
+
+      .item {
+        background-color: tomato;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .item:nth-child(even) {
+        background-color: teal;
+      }
+
+      .i1 {
+        /* Menentukan are suatu item berdasarkan line-number */
+        /* Shorthand column dan row */
+        grid-area: 2 / 2 / 3 / 4;
+        /* row-start / column-start / row-end / column-end */
+
+        /* grid area bisa untuk nama pada template areas */
+        /* bisa juga untuk shorthand column start/end dan row start/end */
+      }
+
+      .i2 {
+        /* Menentukan area suatu item berdasarkan line-name */
+        grid-area: r2 / c1 / r4 / c2;
+        /* row-start / column-start / row-end / column-end */
+      }
+
+      .i3 {
+        /* Kata kunci span (artinya ditambah) */
+        grid-area: r3 / c2 / span 1 / span 2;
+        /* row-start / column-start / row-end / column-end */
+      }
+
+      .i4 {
+        /* Menentukan grid-area pada nama suatu area pada template */
+        grid-area: header;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item i1">1</div>
+      <div class="item i2">2</div>
+      <div class="item i3">3</div>
+      <div class="item i4">4</div>
+      <div class="item i5">5</div>
+      <div class="item i6">6</div>
+      <div class="item i7">7</div>
+      <div class="item i8">8</div>
+      <div class="item i9">9</div>
+    </div>
+  </body>
+</html>
