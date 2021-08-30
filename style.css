@@ -9,25 +9,25 @@ body {
   margin: 50px auto;
   border: 3px solid black;
   display: grid;
-  /* grid-template-columns: 1fr 2fr;
-  grid-template-rows: 50px 2fr 50px;
-  grid-template-areas:
-    "header header" 
-    "aside main" 
-    "footer footer";  */
-
   /* Shorthand */
   grid-template:
     [baris1-start] "header header" 50px
     "aside main" 2fr [baris1-end baris2-start]
     "footer footer" 50px [baris2-end] / 1fr 2fr;
+  /*  Grid Gap untuk mengatur lebar grid line (jarak antar area) */
+  /* grid-column-gap: 3px; (cara lama) */
+  column-gap: 3px;
+  /* grid-column-gap: 3px; (cara lama) */
+  row-gap: 3px;
+
+  /* grid-gap: 10px; (cara lama) */
+  gap: 50px 10px; /* column row gap */
 }
 
 .item {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid wheat;
 }
 
 header {
