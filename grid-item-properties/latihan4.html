@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Latihan 1</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        width: 80%;
+        height: 500px;
+        margin: auto;
+        border: 3px solid black;
+        display: grid;
+        grid-template: [r1] 1fr [r2] 1fr [r3] 1fr [r4] / [c1] 1fr [c2] 1fr [c3] 1fr [c4];
+        /* grid-template: row / column; */
+        grid-template-areas:
+          "header header header"
+          "sidebar content content"
+          "footer footer footer";
+      }
+
+      .item {
+        background-color: tomato;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        height: 50%;
+      }
+
+      .item:nth-child(even) {
+        background-color: teal;
+      }
+
+      /* Justify-self : alignment secara horizontal (y) */
+      .i1 {
+        justify-self: center;
+      }
+      .i2 {
+        justify-self: start;
+      }
+      .i3 {
+        justify-self: end;
+      }
+      .i4 {
+        width: unset;
+        justify-self: stretch;
+      }
+
+      /* align-self : alignment secara vertikal (x) */
+      .i5 {
+        align-self: center;
+      }
+      .i6 {
+        align-self: start;
+      }
+      .i7 {
+        align-self: end;
+      }
+      .i8 {
+        height: unset;
+        align-self: stretch;
+      }
+      .i9 {
+        justify-self: center;
+        align-self: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item i1">justify-self: center</div>
+      <div class="item i2">justify-self: start</div>
+      <div class="item i3">justify-self: end</div>
+      <div class="item i4">justify-self: stretch</div>
+      <div class="item i5">align-self: center</div>
+      <div class="item i6">align-self: start</div>
+      <div class="item i7">align-self: end</div>
+      <div class="item i8">align-self: stretch</div>
+      <div class="item i9">
+        justify-self: center <br />
+        align-self: center
+      </div>
+    </div>
+  </body>
+</html>
