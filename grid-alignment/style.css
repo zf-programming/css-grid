@@ -4,15 +4,21 @@ body {
 }
 
 .container {
-  width: 80%;
+  width: 600px;
   height: 500px;
   border: 3px solid black;
   margin: 50px auto;
   display: grid;
-  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  grid-template: repeat(3, 100px) / repeat(3, 100px);
   gap: 5px;
-  /* place-items: <align-items> <justify-items> */
-  place-items: start center;
+  /* Justify Content */
+  /* Posisi Grid dalam suatu container */
+  /* justify-content: start; */
+  /* justify-content: end; */
+  /* justify-content: center; */
+  /* justify-content: space-around; */
+  /* justify-content: space-between; */
+  justify-content: space-evenly;
 }
 
 .kotak {
@@ -20,12 +26,12 @@ body {
   background-color: cornflowerblue;
   justify-content: center;
   align-items: center;
-  width: 100px;
-  height: 100px;
+  width: 80%;
+  height: 80%;
 }
 
 .kotak:nth-child(even) {
   background-color: coral;
-  height: 150px;
-  width: 150px;
+  height: 60%;
+  width: 60%;
 }
